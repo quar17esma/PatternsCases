@@ -10,7 +10,7 @@ public class PizzaBuilderApp {
     public static void main(String[] args) {
         PizzaBuilder builder = new ConcretePizzaBuilder();
         PizzaDirector director = new PizzaDirector(builder);
-        Pizza pizza = director.construct(PizzaBase.MIDDLE, Adds.TOMATO_SOUCE,Adds.PAPPERONI, Adds.GARLIC);
+        Pizza pizza = director.construct(PizzaBase.MIDDLE, Adds.TOMATO_SOUCE,Adds.PEPPERONI, Adds.GARLIC);
         System.out.println(pizza);
         System.out.println(pizza.getPrice());
 
@@ -110,7 +110,7 @@ enum PizzaBase {
     }
 }
 enum Adds{
-    TOMATO_SOUCE(1), GARLIC(1), PAPPERONI(3), MAZZARELLA(2), PARMESAN(2), MUSHROOMS(1), TOMATO(1);
+    TOMATO_SOUCE(1), GARLIC(1), PEPPERONI(3), MAZZARELLA(2), PARMESAN(2), MUSHROOMS(1), TOMATO(1);
 
     int price;
 
