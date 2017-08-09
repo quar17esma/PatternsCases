@@ -47,11 +47,11 @@ interface TourBuilder{
     Tour getTour();
 
     void buildTransferToAirport(boolean transferToAirport);
-    void buildtransferFromAirport(boolean transferFromAirport);
-    void buildflightTo(boolean flightTo);
-    void buildflightBack(boolean flightBack);
-    void buildhotelReservation(boolean hotelReservation);
-    void buildinsurance(boolean insurance);
+    void buildTransferFromAirport(boolean transferFromAirport);
+    void buildFlightTo(boolean flightTo);
+    void buildFlightBack(boolean flightBack);
+    void buildHotelReservation(boolean hotelReservation);
+    void buildInsurance(boolean insurance);
 }
 
 class ConcreteTourBuilder implements TourBuilder {
@@ -68,27 +68,27 @@ class ConcreteTourBuilder implements TourBuilder {
     }
 
     @Override
-    public void buildtransferFromAirport(boolean transferFromAirport) {
+    public void buildTransferFromAirport(boolean transferFromAirport) {
         tour.setTransferFromAirport(transferFromAirport);
     }
 
     @Override
-    public void buildflightTo(boolean flightTo) {
+    public void buildFlightTo(boolean flightTo) {
         tour.setFlightTo(flightTo);
     }
 
     @Override
-    public void buildflightBack(boolean flightBack) {
+    public void buildFlightBack(boolean flightBack) {
         tour.setFlightBack(flightBack);
     }
 
     @Override
-    public void buildhotelReservation(boolean hotelReservation) {
+    public void buildHotelReservation(boolean hotelReservation) {
         tour.setHotelReservation(hotelReservation);
     }
 
     @Override
-    public void buildinsurance(boolean insurance) {
+    public void buildInsurance(boolean insurance) {
         tour.setInsurance(insurance);
     }
 }
@@ -102,11 +102,11 @@ class Director {
 
     public Tour construct(){
         tourBuilder.buildTransferToAirport(true);
-        tourBuilder.buildtransferFromAirport(true);
-        tourBuilder.buildflightTo(true);
-        tourBuilder.buildflightBack(true);
-        tourBuilder.buildhotelReservation(false);
-        tourBuilder.buildinsurance(true);
+        tourBuilder.buildTransferFromAirport(true);
+        tourBuilder.buildFlightTo(true);
+        tourBuilder.buildFlightBack(true);
+        tourBuilder.buildHotelReservation(false);
+        tourBuilder.buildInsurance(true);
         return tourBuilder.getTour();
     }
 }
