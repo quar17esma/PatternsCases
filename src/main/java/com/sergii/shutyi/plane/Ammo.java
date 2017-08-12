@@ -1,4 +1,4 @@
-package com.sergii.shutyi.state.plane;
+package com.sergii.shutyi.plane;
 
 public enum Ammo {
     MACHINE_GUN(10), CANNON(5), ROCKET(1);
