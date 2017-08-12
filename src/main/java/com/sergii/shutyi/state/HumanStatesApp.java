@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * Human changes depends on his state
  */
-public class StateApp {
+public class HumanStatesApp {
     public static void main(String[] args) {
         Human human = new Human();
 
